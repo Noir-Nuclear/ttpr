@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="547.0" prefWidth="700.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SimpleController">
+   <children>
+      <AnchorPane fx:id="lab2Tables" layoutX="316.0" layoutY="50.0" prefHeight="338.0" prefWidth="299.0">
+         <children>
+            <TableView fx:id="classifictaionTable" accessibleText="Таблица нормированных значений" layoutX="14.0" layoutY="14.0" prefHeight="310.0" prefWidth="134.0" />
+            <TableView fx:id="probabilityTable" accessibleText="Таблица нормированных значений" layoutX="148.0" layoutY="14.0" prefHeight="310.0" prefWidth="134.0" />
+         </children>
+      </AnchorPane>
+      <ComboBox fx:id="menu" layoutX="14.0" layoutY="14.0" prefWidth="150.0" />
+      <AnchorPane fx:id="lab2Inputs" layoutX="14.0" layoutY="400.0" prefHeight="132.0" prefWidth="345.0">
+         <children>
+            <Text layoutX="14.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Переменная 1" />
+            <Text layoutX="14.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Переменная 2" />
+            <Text layoutX="14.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Переменная 3" />
+            <TextField fx:id="variable1" layoutX="100.0" layoutY="17.0" prefHeight="26.0" prefWidth="48.0" />
+            <TextField fx:id="variable2" layoutX="100.0" layoutY="52.0" prefHeight="26.0" prefWidth="48.0" />
+            <TextField fx:id="variable3" layoutX="100.0" layoutY="83.0" prefHeight="26.0" prefWidth="48.0" />
+            <TextArea fx:id="result" editable="false" layoutX="165.0" layoutY="16.0" prefHeight="94.0" prefWidth="112.0" />
+            <Button fx:id="calculateNaiveResult" layoutX="293.0" layoutY="17.0" mnemonicParsing="false" text="Вычислить" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="commonTables" layoutX="14.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <TableView fx:id="sourceTable" accessibleText="Таблица изначальных значений" layoutX="14.0" layoutY="14.0" prefHeight="310.0" prefWidth="134.0" />
+            <TableView fx:id="normalTable" accessibleText="Таблица нормированных значений" layoutX="148.0" layoutY="14.0" prefHeight="310.0" prefWidth="134.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="lab1Controls" layoutX="316.0" layoutY="50.0" prefHeight="325.0" prefWidth="369.0">
+         <children>
+            <TextField fx:id="posibilityField" editable="false" layoutX="246.0" layoutY="26.0" />
+            <TableView fx:id="behaviorTable" accessibleText="Таблица нормированных значений" layoutX="14.0" layoutY="14.0" prefHeight="310.0" prefWidth="134.0" />
+            <TextField fx:id="probabilityField" editable="false" layoutX="246.0" layoutY="56.0" />
+            <Text layoutX="160.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вероят. подход" wrappingWidth="86.1070556640625" />
+            <Text layoutX="170.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Возм. подход" wrappingWidth="75.19999866026558" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="lab3Graphic" layoutX="39.0" layoutY="27.0" prefHeight="499.0" prefWidth="658.0">
+         <children>
+            <LineChart fx:id="graphic" layoutX="14.0" layoutY="28.0">
+              <xAxis>
+                <NumberAxis side="BOTTOM" fx:id="xAxis" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <TextArea fx:id="alphaDescription" layoutX="520.0" layoutY="116.0" prefHeight="115.0" prefWidth="134.0" />
+            <TextArea fx:id="lab3Result" layoutX="278.0" layoutY="419.0" prefHeight="63.0" prefWidth="334.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="lab4TablesAndButton" layoutX="10.0" layoutY="39.0" prefHeight="508.0" prefWidth="701.0">
+         <children>
+            <TableView fx:id="distanceTable" layoutX="201.0" layoutY="36.0" prefHeight="435.0" prefWidth="218.0" />
+            <TableView fx:id="pointsTable" layoutX="38.0" layoutY="36.0" prefHeight="435.0" prefWidth="163.0" />
+            <TableView fx:id="centersTable" layoutX="419.0" layoutY="36.0" prefHeight="198.0" prefWidth="218.0" />
+            <Button fx:id="reCalculateCenters" layoutX="419.0" layoutY="260.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="201.0" text="Провести итерацию" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
